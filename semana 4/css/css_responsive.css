@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}
+body{
+
+    font-family: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* seccion <header> cabecera */
+#header{
+    background-color: aquamarine;
+    border:2px solid blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;/* alinear horizontalmente*/
+    align-items:  center;/* alinear horizontal*/
+    grid-area: header;/*nombre contenedor CSS GRID*/
+}
+ul{
+    padding: 0;
+    margin: 0 1px;
+}
+li{
+    list-style: none ;/*quita viñetas*/
+    margin: 0  5 px;
+    font: boid 12px verdana;
+}
+a{
+    color:white;
+    text-decoration: none;/* quita subrayado*/
+}
+/*seccion estilos <nav> barra menus  */
+#menu{
+    grid-area:  nav;/*nombre contenedor  CSS GRID*/
+    background-color: blue;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* seccion estilos barra submenu  */
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li>a{
+    display: block;
+    padding:  15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li a:hover {
+    color: lightsalmon;
+    transition: all .3s;
+}/*evento css al pasar el mouse encima del menu*/
+.submenu{
+    position: absolute;
+    background: blue;
+    width: 120%;
+    display: none;/*se manmtenga oculto*/
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{/* evento de mostrar submenu al pasar al pasar el mouse */
+    display: block;
+    z-index: 100;/*capa superior en pagina web*/
+}
+/* seccion de estilos buscarbox */
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0px;
+    border-radius: 40px;
+    padding-right: 50px;
+    transition:  ease 0.8s;
+}
+.buscarbox input:hover{/*evento ampliar ancho al pasar mouse*/
+    width: 150px;
+    padding-left: 18px;
+    outline: none;
+}
+/* seccion de contenido <section> y <article> */
+#main{
+    grid-area: main;/*nombre contenedor  CSS GRID*/
+    border: 2px solid greenyellow;
+    border-radius: 22px;
+    max-width: 100%;/*adaptable a cualquier dispositivo*/
+    height: auto;/* adaptable a cualquier dispositivo*/
+    background-color: rgba(255,255,255,0.6);/*efecto glass*/
+    backdrop-filter: blur(5px);/*efecto glass*/
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/* seccion estilos <article> iconos de escuelas incap */
+.programa{
+    display: inline-block;
+    margin: 5px ;
+    padding: 5px ;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+section article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter:  blur(5px);
+    margin: 20px;
+}
+/* seccion estilos <aside> barra lateral */
+#sidebar{
+    grid-area: sidebar;/*nombre contenedor CSS GRID*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;/* adaptable a cualquier dispositivo*/
+    height: auto;/*adaptable a cualquier dispositivo*/
+}
+/* seccion estilos <footer> */
+#footer{
+    grid-area: footer;/*nombre contenedor para CSS GRID*/
+    padding-top: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 22px;
+    clear: both;/*eliminar flotamiento parte superior*/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);/*agrandar icono al evento de pasar mouse*/
+}
+/* estilos a iconos fontawesome redes sociales*/
+i[class^="fa"]{
+    color: grey;
+    font-size: 18px;
+}
+i[class^="fab"]{
+    color: grey;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0px;
+}
+/* seccion CSS GRID PARA  GRID CONTAINER  */
+#grid-container> * {
+    text-align: center; 
+    box-shadow: 1px 1px 7px 0px  rgba( 0,0,0,0.75);
+}
+/* seccion de CSS para VISTA PC: 3 columnas  */
+#grid-container{
+display: grid;
+grid-gap:10px;
+grid-template:
+"header  header header" 150px
+"nav nav nav" 50px
+"main main sidebar" 300px
+"main main sidebar" 300px
+"main main sidebar" 250px
+"footer footer footer" 150px /
+1300px 150px 300px;
+}
+/* SECCION CSS VISTA TABLE : 2 COLUMNAS  */
+@media (max-width:1024px){
+    #grid-container{
+    grid-template:
+    "header header" 170px
+    "nav main" 800px 
+    "nav main" 700px
+    "sidebar sidebar" 650px
+    "footer footer" 100px /
+    250px 450px;
+    font-size: 75%;
+}
+#menu{
+    background-color: blue;
+    border-radius: 22px;
+    display: block;
+    padding: 45px;
+    margin: 40px;
+    text-align: center;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;/*auto ajuste del elemento en contenedor */
+    max-width: 100%;
+}
+.programa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+iframe{
+    max-width: 100%;/*auto ajuste al dispositivo*/
+    height: auto;/*auto ajuste al dispositivo*/
+}
+.buscarbox{
+    display: block;
+    padding: 5px;
+}
+}
+/* seccion css grid vista celular 1 columna */
+@media (max-width:640px){
+    #grid-container{
+        grid-template:
+        "header" 150px
+        "nav" 50
+        "main" 1120px
+        "sidebar" 800px /
+        500px;
+        font-size: 60%;
+        
+    }
+    /* nota: el contenedor <nav> sera ocultado y reemplazado por icono  hamgurguesa */
+    #menu{
+        display: none;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+    .programa{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+    }
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    .buscarbox{
+    display: none; /*se oculta lupa y buscador¨*/
+    }
+    
+
+
+}

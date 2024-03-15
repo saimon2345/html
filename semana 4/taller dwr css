@@ -9,7 +9,7 @@
     <!-- SECCION DE ICONOS DE FONTAWESOME -->
     <script src="https://kit.fontawesome.com/a1124a3708.js" crossorigin="anonymous"></script>
     <!-- SECCION DE LINK DE HOJA DE ESTILOS CASCADA CSS -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/css_responsive.css">
 
     </head>
 <body>
