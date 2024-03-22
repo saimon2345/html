@@ -1,0 +1,84 @@
+
+<!-- saved from url=(0052)http://127.0.0.1:5500/taller%20grid%20bootstrap.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>semana 7
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOTSTRAP 5.0</title>
+    <style>
+        div[class^=col]{
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <!--  LINK BOOTSTRAP CSS -->
+    <link href="./BOOTSTRAP 5.0_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-6 col-xl-9 border bg-success text-white">ROW 1 COL 1</div>
+            
+                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-3 border bg-success text-white">ROW 2 COL 2 </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-6 col-xl-5 border bg-warning
+            text-danger">ROW 2 COL 1</div>
+            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-5 border bg-warning
+            text-danger">ROW 2 COL 2</div>
+            <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 border bg-warning
+            text-danger">ROW 2 COL 3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-7 col-lg-8 col-xl-5 border bg-primary text-warning">ROW 3 COL 1</div>
+            <div class="col-sm-12 col-md-5 col-lg-4 col-xl-7 border bg-primary text-warning">ROW 3 COL 1</div>
+        </div>
+    </div>
+    <!-- LINK BOOTSTRAP JS -->
+    <script src="./BOOTSTRAP 5.0_files/bootstrap.bundle.min.js.descarga" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+ </body></html>
