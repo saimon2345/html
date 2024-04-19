@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN </title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./estilos_tabla.css">
+</head>
+<body>
+    <center>
+        <img src="./img 11/logo incap.jpeg" alt=""width="150" height="150">
+        <h1>BOLETIN NOTAS INCAP</h1>
+        <h2>MATERIA PAE JAVASCRIPT</h2>
+        <h3>APROBADO MINIMO 3.0 - EXCELENTE 5.0</h3>
+        <Script>
+            let nombre=prompt("INGRESE NOMBRE ESTUDIANTE");
+            let curso=prompt("INGRESE SU CURSO ACTUAL");
+            let nota01=parseFloat(prompt("INGRESE PRIMERA NOTA [1-5]"));
+            let nota02=parseFloat(prompt("INGRESE SEGUNDA NOTA [1-5]"));
+            let nota03=parseFloat(prompt("INGRESE TERCERA  NOTA [1-5]"));
+            //CALCULAR DEFINITIVA
+            definitiva=(nota01+nota02+nota03)/3;
+            //SALIDA
+            document.write("<table><caption>RELACION NOTAS </caption><tr><th>NOMBRE</th><td>",nombre,"</td></tr><tr><th>CURSO</th><td>",curso,"</td></tr><tr><th>NOTA01</th><td>",nota01.toFixed(1),"</td></tr><tr><th>NOTA02</th><td>",nota02.toFixed(1),"</td></tr><tr><th>NOTA03</th><td>",nota03.toFixed(1),"</td></tr><tr><th>DEFINITIVA</th><td>",definitiva.toFixed(2),"</th></tr>");
+                //CONDICIONAL 
+                if(definitiva<3.0){
+                    swal("Apreciado estudiante","HAS REPROBADO MATERIA PAE","error");
+                    document.write("<tr><th>ESTADO</th><td>REPROBADO</td></table>");
+                }else{
+                swal("Apreciado estudiante","HAS APROBADO MATERIA PAE","success");
+                    document.write("<tr><th>ESTADO</th><td>APROBADO</td></table>");}
+
+
+
+        </Script>
+
+
+
+
+    </center>
+</body>
+</html>

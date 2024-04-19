@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAJE TM </title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <center>
+        <img src="./img 11/transmicaca.jpeg" alt=""width="150"height="150">
+        <h1>INGRESO A SISTEMA TRANSMILENIO</h1>
+        <h2>VALIDACION DE PASAJE - TARJETA TU LLAVE </h2>
+        <script>
+            let saldo;
+            const TM=2950;
+            //ENTRADA
+            saldo=parseInt(prompt("Ingrese recarga de su tarjeta "));
+            //condicional
+            if(saldo>=TM){
+                swal("Estimado usuario","INGRESE AL SISTEMA TM","succcess");
+                document.write("BIENVENIDO AL SISTEMA TRANSMILENIO");
+            }else{
+                swal("Estimado usuario","SALDO INSUFICIENTE","error");
+                document.write("RECARGUE SU TARJETA LLAVE ");
+                }
+        </script>
+
+    </center>
+</body>
+</html>

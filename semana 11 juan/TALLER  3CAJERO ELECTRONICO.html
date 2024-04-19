@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAJERO ELECTRONICO</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        h1,h2,h3{
+            font-size: 26px;
+            color: blueviolet;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <img src="./img 11/nu.jpeg" alt=""width="150" height="150">
+        <h1>BANCO NUBANK</h1>
+        <h2>RETIRO DE  DINERO DE CAJERO ELECTRONICO</h2>
+        <h3>BIENVENIDO SR. USUARIO</h3>
+        <script>
+            let sw=0; //variable bandera para verificar si tiene saldo ,estado apagado
+            let cuenta=prompt("INGRESE CUENTA DE AHORROS");
+            let saldo=parseInt(prompt("INGRESE VALOR A CONSIGNAR"));
+            let valor=parseInt(prompt("INGRESE MONTO DE DINERO A RETIRAR "));
+            //CONDICIONAL
+            if(valor>saldo){
+                swal("Estimado usuario","*******FONDOS INSUFICIENTES ****","error");
+            }else{
+                sw=1;//var bandera activada
+                var saldof;
+                saldof=saldo-valor;
+                swal("Estimado usuario","RETIRE SU DINERO !!","success");
+            }
+            //condicional
+            if(sw==0){
+                document.write("SU SALDO DISPONIBLE ES.....$"+saldo);
+            }else{
+                document.write("FAVOR RETIRE SU TARJETA... SU SALDO ACTUAL ES....$"+saldof);
+            }
+
+
+
+        </script>
+    </center>
+</body>
+</html>
